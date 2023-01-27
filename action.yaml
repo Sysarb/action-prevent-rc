@@ -1,5 +1,8 @@
 name: 'Block on release candidates'
 description: 'If any sysarb packages uses release candidate versions this action will fail'
 runs:
-  using: 'node16'
-  main: 'index.js'
+  using: "composite"
+  steps:
+    - uses: actions/checkout@v3
+    - run: node index.js
+      shell: bash
