@@ -1,6 +1,4 @@
 const core = require('@actions/core');
-const github = require('@actions/github');
-
 const file = require(`${core.getInput('path')}/package.json`);
 
 try {
