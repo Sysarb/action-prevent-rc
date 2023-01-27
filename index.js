@@ -1,5 +1,5 @@
 const core = require('@actions/core');
-const file = require('./package.json');
+const file = require('/github/workspace/package.json');
 
 try {
     for (const [key, value] of Object.entries(file.dependencies)) {
