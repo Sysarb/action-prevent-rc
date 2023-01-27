@@ -1,5 +1,10 @@
 name: 'Block on release candidates'
 description: 'If any sysarb packages uses release candidate versions this action will fail'
+inputs:
+  path:  # id of input
+    description: '${{ github.workspace }}'
+    required: true
+    default: ''
 runs:
   using: 'node16'
   main: 'index.js'
